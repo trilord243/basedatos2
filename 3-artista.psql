@@ -1,0 +1,9 @@
+CREATE TABLE artista(
+    id_artista SERIAL PRIMARY KEY,
+    nombre_casa_disquera VARCHAR(100) NOT NULL,
+    fecha_inicio DATE NOT NULL DEFAULT CURRENT_DATE,
+    fecha_fin DATE,
+    nom_artistico VARCHAR(100) NOT NULL,
+    CONSTRAINT fk_artista_casa_disquera FOREIGN KEY (nombre_casa_disquera) REFERENCES casa_disquera(nombre) ON DELETE CASCADE ON UPDATE CASCADE,
+    CHECK (fecha_fin IS NULL OR fecha_fin >= fecha_inicio)
+);
