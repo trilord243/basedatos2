@@ -1,0 +1,10 @@
+CREATE TABLE aplicacion(
+    id_aplicacion SERIAL PRIMARY KEY,
+    tamaño_mb INT NOT NULL CHECK (tamaño_mb > 0),
+    version VARCHAR(50) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    version_IOS VARCHAR(10) NOT NULL,
+    tematica tematica_app,
+    id_proveedor INTEGER,
+    CONSTRAINT fk_aplicacion_proveedor FOREIGN KEY (id_proveedor) REFERENCES proveedor(id)
+);

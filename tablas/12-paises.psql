@@ -1,0 +1,5 @@
+CREATE TABLE paises(
+    nombre_pais VARCHAR(50) PRIMARY KEY,
+    id_promocion INT,
+    CONSTRAINT fk_key_promocion FOREIGN KEY (id_promocion) REFERENCES promocion(id_promocion)
+);

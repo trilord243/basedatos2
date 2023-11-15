@@ -1,0 +1,7 @@
+CREATE TABLE promocion(
+    id_promocion SERIAL PRIMARY KEY,
+    descuento INT NOT NULL CHECK (descuento > 0), 
+    fecha_inicio DATE NOT NULL,
+    fecha_fin DATE NOT NULL CHECK (fecha_fin > fecha_inicio),
+    duracion INT
+);

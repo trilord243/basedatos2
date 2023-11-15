@@ -1,0 +1,2 @@
+CREATE DOMAIN tematica_app AS VARCHAR(50)
+    CHECK (VALUE IN ('cocina', 'lectura', 'juegos', 'educacion', 'salud', 'deporte', 'musica', 'noticias'));

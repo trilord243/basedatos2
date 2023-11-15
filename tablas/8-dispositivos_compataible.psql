@@ -1,0 +1,5 @@
+CREATE TABLE dispositivo_com(
+    dispositivo VARCHAR(50) NOT NULL PRIMARY KEY,
+    id_aplicacion INT NOT NULL,
+    CONSTRAINT fk_dispositivo_com_aplicacion FOREIGN KEY (id_aplicacion) REFERENCES aplicacion(id_aplicacion)
+);
