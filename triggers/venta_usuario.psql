@@ -1,0 +1,22 @@
+CREATE OR REPLACE FUNCTION verificar_y_crear_promocion()
+RETURNS TRIGGER AS $$
+DECLARE
+    contador_compras INT;
+BEGIN
+    -- Cuenta el número total de compras realizadas por el usuario
+    SELECT COUNT(*) INTO contador_compras FROM compras WHERE id_usuario = NEW.id_usuario;
+
+    -- Verifica si el número de compras supera 3
+    IF contador_compras > 3 THEN
+        -- Inserta una nueva promoción (ajusta los detalles según sea necesario)
+        INSERT INTO promocion (descuento, fecha_inicio, fecha_fin)
+        VALUES (30, CURRENT_DATE, CURRENT_DATE + INTERVAL '1 month');
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+CREATE TRIGGER trigger_verificar_compras
+AFTER INSERT ON compras
+FOR EACH ROW
+EXECUTE FUNCTION verificar_y_crear_promocion();

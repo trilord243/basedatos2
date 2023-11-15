@@ -6,5 +6,6 @@ CREATE TABLE aplicacion(
     version_IOS VARCHAR(10) NOT NULL,
     tematica tematica_app,
     id_proveedor INTEGER,
+    descripcion VARCHAR(50),
     CONSTRAINT fk_aplicacion_proveedor FOREIGN KEY (id_proveedor) REFERENCES proveedor(id)
 );
