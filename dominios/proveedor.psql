@@ -1,0 +1,2 @@
+CREATE DOMAIN tipo_proveedor AS VARCHAR(20)
+    CHECK (VALUE IN ('desarrollador', 'empresa'));

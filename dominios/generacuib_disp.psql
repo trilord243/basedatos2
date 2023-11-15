@@ -1,0 +1,2 @@
+CREATE DOMAIN generacion_disp AS VARCHAR(10)
+    CHECK (VALUE IN ('Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5'));
