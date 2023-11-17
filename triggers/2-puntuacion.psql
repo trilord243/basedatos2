@@ -1,21 +1,21 @@
 CREATE OR REPLACE FUNCTION actualizar_puntuacion_producto()
 RETURNS TRIGGER AS $$
+
 DECLARE
     puntuacion_promedio FLOAT;
 BEGIN
-    -- Calcular la puntuación promedio para el producto
+    -- Calcular la puntuaci¢n promedio para el producto
     SELECT AVG(rating) INTO puntuacion_promedio
     FROM compras
     WHERE id_producto = NEW.id_producto AND rating IS NOT NULL;
 
-    -- Actualizar la puntuación del producto
+    -- Actualizar la puntuaci¢n del producto
     UPDATE producto
     SET puntuacion = puntuacion_promedio
     WHERE id_producto = NEW.id_producto;
 
     RETURN NEW;
 END;
-$$ LANGUAGE plpgsql;
 
 
 CREATE TRIGGER actualizar_puntuacion_after_compra

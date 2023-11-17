@@ -1,0 +1,26 @@
+CREATE OR REPLACE FUNCTION fn_promocion_compras_usuario()
+RETURNS TRIGGER AS $$
+DECLARE
+    cantidad_compras INT;
+BEGIN
+    -- Contar el número de compras realizadas por el usuario
+    SELECT COUNT(*)
+    INTO cantidad_compras
+    FROM compras
+    WHERE id_usuario = NEW.id_usuario;
+
+    -- Verificar si el usuario ha comprado más de 3 productos
+    IF cantidad_compras > 3 THEN
+        -- Insertar una nueva promoción
+        INSERT INTO promocion (descuento, fecha_inicio, fecha_fin, duracion)
+        VALUES (30, CURRENT_DATE, CURRENT_DATE + INTERVAL '1 month', 30);
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER tr_promocion_compras
+AFTER INSERT ON compras
+FOR EACH ROW
+EXECUTE FUNCTION fn_promocion_compras_usuario();

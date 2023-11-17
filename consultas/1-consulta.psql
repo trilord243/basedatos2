@@ -1,0 +1,6 @@
+SELECT p.nombre, COUNT(*) AS cantidad_aplicaciones
+FROM proveedor p
+JOIN aplicacion a ON p.id = a.id_proveedor
+GROUP BY p.nombre
+ORDER BY cantidad_aplicaciones DESC
+LIMIT 1;

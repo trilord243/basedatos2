@@ -6,5 +6,6 @@ CREATE TABLE usuario (
     num_tdc VARCHAR(16) NOT NULL CHECK (num_tdc ~ '^\d+$'),
     fecha_venc DATE NOT NULL,
     cod_vvt VARCHAR(5) NOT NULL CHECK (cod_vvt ~ '^\d+$'),
-    direccion VARCHAR(255) NOT NULL
+    direccion VARCHAR(255) NOT NULL,
+    pais VARCHAR(50) NOT NULL,
 );

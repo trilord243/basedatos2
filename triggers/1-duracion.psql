@@ -4,6 +4,7 @@ BEGIN
     NEW.duracion := NEW.fecha_fin - NEW.fecha_inicio;
     RETURN NEW;
 END;
+
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER calcular_duracion

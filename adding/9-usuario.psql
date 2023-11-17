@@ -1,0 +1,11 @@
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES
+('pedro.alvarez@example.com', 'Pedro', 'Alvarez', '8888999911112222', '2025-11-01', '987', '1717 Calle Inventada', 'Perú'),
+('julia.martinez@example.com', 'Julia', 'Martinez', '6666777788889999', '2025-12-01', '876', '1818 Avenida Ilusión', 'Bolivia'),
+('fernando.garcia@example.com', 'Fernando', 'Garcia', '4444555566667777', '2026-01-01', '765', '1919 Camino Ficticio', 'Argentina'),
+('claudia.rodriguez@example.com', 'Claudia', 'Rodriguez', '2222333344445555', '2026-02-01', '654', '2020 Vía Imaginada', 'Chile'),
+('roberto.sanchez@example.com', 'Roberto', 'Sanchez', '9999888877776666', '2026-03-01', '543', '2121 Boulevard Fantasía', 'México'),
+('gabriela.lopez@example.com', 'Gabriela', 'Lopez', '7777666655554444', '2026-04-01', '432', '2222 Paseo Inexistente', 'Colombia'),
+('daniel.jimenez@example.com', 'Daniel', 'Jimenez', '5555444433332222', '2026-05-01', '321', '2323 Callejón Soñado', 'Venezuela'),
+('andrea.torres@example.com', 'Andrea', 'Torres', '3333222211110000', '2026-06-01', '210', '2424 Avenida Utopía', 'España'),
+('sergio.gomez@example.com', 'Sergio', 'Gomez', '1111000099998888', '2026-07-01', '109', '2525 Ruta Ilusoria', 'Ecuador'),
+('alicia.martinez@example.com', 'Alicia', 'Martinez', '8888777766665555', '2026-08-01', '098', '2626 Sendero Ficticio', 'Paraguay');

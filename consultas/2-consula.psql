@@ -1,0 +1,5 @@
+SELECT u.num_tdc, COUNT(c.id_compra) AS cantidad_compras
+FROM usuario u
+JOIN compras c ON u.id_usuario = c.id_usuario
+WHERE u.fecha_venc BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '3 months'
+GROUP BY u.num_tdc;

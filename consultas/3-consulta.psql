@@ -1,0 +1,14 @@
+SELECT DISTINCT u.id_usuario, u.nombre, u.apellido
+FROM usuario u
+WHERE EXISTS (
+    SELECT 1
+    FROM compras c
+    JOIN aplicacion a ON c.id_producto = a.id_aplicacion
+    WHERE c.id_usuario = u.id_usuario AND a.tematica = 'cocina'
+)
+AND EXISTS (
+    SELECT 1
+    FROM compras c
+    JOIN cancion can ON c.id_producto = can.id_cancion
+    WHERE c.id_usuario = u.id_usuario AND can.genero = 'Electrónica'
+);

@@ -1,2 +1,6 @@
+
 CREATE DOMAIN genero_musical AS VARCHAR(50)
-    CHECK (VALUE IN ('Rock', 'Pop', 'Jazz', 'Clásica', 'Electrónica', 'Reggae', 'Hip Hop', 'Blues', 'Country', 'Folk'));
+CHECK (
+    VALUE IN ('Pop', 'Balada', 'Rock', 'Jazz', 'Electrónica', 'Reggae', 'Country', 'Hip Hop', 'Folk')
+);
+

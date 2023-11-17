@@ -1,0 +1,13 @@
+INSERT INTO proveedor (id, nombre, correo, direccion, fecha_afiliacion, tipo_proveedor) VALUES
+(1, 'Proveedor 1', 'correo1@proveedor.com', 'Dirección 1', '2023-11-16', 'desarrollador'),
+(2, 'Proveedor 2', 'correo2@proveedor.com', 'Dirección 2', '2023-11-16', 'desarrollador'),
+(3, 'Proveedor 3', 'correo3@proveedor.com', 'Dirección 3', '2023-11-16', 'desarrollador'),
+(4, 'Proveedor 4', 'correo4@proveedor.com', 'Dirección 4', '2023-11-16', 'desarrollador'),
+(5, 'Proveedor 5', 'correo5@proveedor.com', 'Dirección 5', '2023-11-16', 'desarrollador'),
+(6, 'Empresa A', 'correo6@empresa.com', 'Dirección 6', '2023-11-16', 'empresa'),
+(7, 'Empresa B', 'correo7@empresa.com', 'Dirección 7', '2023-11-16', 'empresa'),
+(8, 'Empresa C', 'correo8@empresa.com', 'Dirección 8', '2023-11-16', 'empresa'),
+(9, 'Empresa D', 'correo9@empresa.com', 'Dirección 9', '2023-11-16', 'empresa'),
+(10, 'Empresa E', 'correo10@empresa.com', 'Dirección 10', '2023-11-16', 'empresa'),
+(11, 'Desarrollador X', 'contacto@desarrolladorx.com', 'Dirección X', '2023-11-17', 'desarrollador'),
+(12, 'Empresa Y', 'info@empresay.com', 'Dirección Y', '2023-11-17', 'empresa');

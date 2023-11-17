@@ -1,0 +1,13 @@
+INSERT INTO paises (nombre_pais, id_promocion) VALUES
+('España', 1),
+('México', 2),
+('Argentina', 3),
+('Colombia', 4),
+('Perú', 5),
+('Chile', 6),
+('Ecuador', 7),
+('Guatemala', 8),
+('Cuba', 9),
+('Bolivia', 10),
+('Italia', 11),
+('Alemania', 11);

@@ -1,0 +1,26 @@
+CREATE OR REPLACE FUNCTION fn_crear_promocion_despues_compra()
+RETURNS TRIGGER AS $$
+DECLARE
+    total_compras INT;
+BEGIN
+    -- Contar el total de compras realizadas por el usuario antes de esta compra
+    SELECT COUNT(*)
+    INTO total_compras
+    FROM compras
+    WHERE id_usuario = NEW.id_usuario AND fecha_compra < NEW.fecha_compra;
+
+    -- Verificar si el usuario ha comprado 3 veces antes de esta compra
+    IF total_compras = 3 THEN
+        -- Insertar una nueva promoción con un descuento del 30%
+        INSERT INTO promocion (descuento, fecha_inicio, fecha_fin, duracion)
+        VALUES (30, CURRENT_DATE, CURRENT_DATE + INTERVAL '1 month', 30);
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER tr_crear_promocion_despues_compra
+AFTER INSERT ON compras
+FOR EACH ROW
+EXECUTE FUNCTION fn_crear_promocion_despues_compra();

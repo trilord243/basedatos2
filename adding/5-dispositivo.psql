@@ -1,0 +1,11 @@
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_ios, modelo) VALUES
+(11, 64, 'Gen1', 'iOS 10', 'Modelo A'),
+(12, 128, 'Gen2', 'iOS 11', 'Modelo B'),
+(13, 256, 'Gen3', 'iOS 12', 'Modelo C'),
+(14, 512, 'Gen4', 'iOS 13', 'Modelo D'),
+(15, 32, 'Gen1', 'iOS 14', 'Modelo E'),
+(16, 64, 'Gen2', 'iOS 15', 'Modelo F'),
+(17, 128, 'Gen3', 'iOS 16', 'Modelo G'),
+(18, 256, 'Gen4', 'iOS 17', 'Modelo H'),
+(19, 512, 'Gen1', 'iOS 18', 'Modelo I'),
+(20, 32, 'Gen2', 'iOS 19', 'Modelo J');
