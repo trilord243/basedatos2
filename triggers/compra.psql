@@ -1,0 +1,39 @@
+CREATE OR REPLACE FUNCTION verificar_compatibilidad_ios()
+RETURNS TRIGGER AS $$
+DECLARE
+    version_dispositivo VARCHAR(15);
+    version_requerida_app VARCHAR(15);
+    es_aplicacion BOOLEAN;
+BEGIN
+    -- Verificar si el id_producto corresponde a una aplicación
+    SELECT EXISTS(SELECT 1 FROM aplicacion WHERE id_aplicacion = NEW.id_producto)
+    INTO es_aplicacion;
+
+    -- Si es una aplicación, entonces realizar la comprobación de la versión de iOS
+    IF es_aplicacion THEN
+        -- Obtener la versión iOS requerida por la aplicación
+        SELECT version_ios INTO version_requerida_app
+        FROM aplicacion
+        WHERE id_aplicacion = NEW.id_producto;
+
+        -- Obtener la versión iOS del dispositivo que corresponde al usuario
+        -- Asumiendo que existe una forma de relacionar un usuario con un dispositivo
+        -- Aquí necesitas ajustar la consulta para obtener la versión del dispositivo del usuario
+        -- SELECT version_ios INTO version_dispositivo
+        -- FROM dispositivo
+        -- WHERE id_dispositivo = [RELACIÓN ENTRE USUARIO Y DISPOSITIVO];
+
+        -- Verificar si la versión del dispositivo es compatible con la aplicación
+        IF version_dispositivo < version_requerida_app THEN
+            RAISE EXCEPTION 'La versión del iOS del dispositivo no es compatible con la aplicación.';
+        END IF;
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER verificar_compatibilidad_ios_before_insert
+BEFORE INSERT ON compras
+FOR EACH ROW
+EXECUTE FUNCTION verificar_compatibilidad_ios();

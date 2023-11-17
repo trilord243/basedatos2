@@ -1,5 +1,5 @@
-CREATE TABLE producto(
+CREATE TABLE producto (
     id_producto SERIAL PRIMARY KEY,
-    puntuacion INT  DEFAULT 0 CHECK (puntuacion >= 0 AND puntuacion <= 5),
+    puntuacion INT DEFAULT 0 CHECK (puntuacion >= 0 AND puntuacion <= 5),
     costo INT NOT NULL CHECK (costo > 0)
 );

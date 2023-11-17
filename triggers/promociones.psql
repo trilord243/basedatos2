@@ -1,0 +1,34 @@
+CREATE OR REPLACE FUNCTION validar_pais_promocion()
+RETURNS TRIGGER AS $$
+DECLARE
+    pais_usuario VARCHAR(50);
+BEGIN
+    -- Salir si id_promocion es nulo
+    IF NEW.id_promocion IS NULL THEN
+        RETURN NEW;
+    END IF;
+
+    -- Obtener el país del usuario
+    SELECT pais INTO pais_usuario
+    FROM usuario
+    WHERE id_usuario = NEW.id_usuario;
+
+    -- Verificar si el país del usuario coincide con los países de la promoción
+    IF NOT EXISTS (
+        SELECT 1
+        FROM paises
+        WHERE id_promocion = NEW.id_promocion AND nombre_pais = pais_usuario
+    ) THEN
+        RAISE EXCEPTION 'El país del usuario no coincide con los países de la promoción.';
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+
+
+CREATE TRIGGER validar_pais_promocion_before_insert
+BEFORE INSERT ON compras
+FOR EACH ROW
+EXECUTE FUNCTION validar_pais_promocion();

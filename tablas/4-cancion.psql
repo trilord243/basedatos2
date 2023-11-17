@@ -1,4 +1,4 @@
-CREATE TABLE cancion(
+CREATE TABLE cancion (
     id_cancion INTEGER PRIMARY KEY,
     id_artista INTEGER NOT NULL,
     genero genero_musical NOT NULL,

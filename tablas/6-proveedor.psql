@@ -1,8 +1,8 @@
-CREATE TABLE proveedor(
+CREATE TABLE proveedor (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     correo VARCHAR(50) NOT NULL CHECK (correo ~ '^.+@.+\..+$'),
     direccion VARCHAR(255) NOT NULL,
     fecha_afiliacion DATE DEFAULT CURRENT_DATE,
-    tipo_proveedor tipo_proveedor
+    tipo_proveedor tipo_proveedor NOT NULL
 );

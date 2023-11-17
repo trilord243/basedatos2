@@ -1,12 +1,10 @@
-CREATE TABLE cancion(
-    id_cancion SERIAL PRIMARY KEY,
-    id_artista INTEGER NOT NULL,
-    genero genero_musical NOT NULL,
-    nom_disco VARCHAR(50) NOT NULL,
-    duracion INT NOT NULL CHECK (duracion > 0),
-    fecha_lanz DATE NOT NULL DEFAULT CURRENT_DATE,
-    nomb_cancion VARCHAR(50) NOT NULL,
-    un_vendidas INT NOT NULL CHECK (un_vendidas >= 0),
-    CONSTRAINT fk_cancion_artista FOREIGN KEY (id_artista) REFERENCES artista(id_artista),
-    CONSTRAINT fk_cancion_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+CREATE TABLE artista (
+    id_artista SERIAL PRIMARY KEY,
+    nombre_casa_disquera VARCHAR(100) NOT NULL,
+    fecha_inicio DATE NOT NULL DEFAULT CURRENT_DATE,
+    fecha_fin DATE,
+    nom_artistico VARCHAR(100) NOT NULL,
+    CONSTRAINT artista_check CHECK (fecha_fin IS NULL OR fecha_fin >= fecha_inicio),
+    CONSTRAINT fk_artista_casa_disquera FOREIGN KEY (nombre_casa_disquera)
+        REFERENCES casa_disquera(nombre) ON DELETE CASCADE ON UPDATE CASCADE
 );

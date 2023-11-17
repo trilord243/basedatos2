@@ -1,10 +1,10 @@
-CREATE TABLE usuario(
-    id_usuario SERIAL PRIMARY KEY, 
+CREATE TABLE usuario (
+    id_usuario SERIAL PRIMARY KEY,
     correo VARCHAR(50) NOT NULL CHECK (correo ~ '^.+@.+\..+$'),
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
-    num_tdc VARCHAR(16) CHECK (num_tdc ~ '^\d+$') NOT NULL,
+    num_tdc VARCHAR(16) NOT NULL CHECK (num_tdc ~ '^\d+$'),
     fecha_venc DATE NOT NULL,
-    cod_vvt VARCHAR(5) CHECK (cod_vvt ~ '^\d+$') NOT NULL,
+    cod_vvt VARCHAR(5) NOT NULL CHECK (cod_vvt ~ '^\d+$'),
     direccion VARCHAR(255) NOT NULL
 );

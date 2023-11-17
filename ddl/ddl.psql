@@ -1,0 +1,131 @@
+--CREATE DATABASE proyecto_fase2 WITH ENCODING 'UTF8';
+CREATE DOMAIN genero_musical AS VARCHAR(50)
+CHECK (
+    VALUE IN ('Pop', 'Balada', 'Rock', 'Jazz', 'Electrónica', 'Reggae', 'Country', 'Hip Hop', 'Folk')
+);
+
+CREATE DOMAIN tematica_app AS VARCHAR(50)
+CHECK (
+    VALUE IN ('juegos', 'cocina', 'lectura', 'deporte', 'música', 'salud', 'educacion', 'noticias', 'viajes')
+);
+
+CREATE DOMAIN generacion_disp AS VARCHAR(50)
+CHECK (
+    VALUE IN ('Gen1', 'Gen2', 'Gen3', 'Gen4')
+);
+
+CREATE DOMAIN tipo_proveedor AS VARCHAR(50)
+CHECK (
+    VALUE IN ('desarrollador', 'empresa')
+);
+
+
+CREATE TABLE casa_disquera (
+    nombre VARCHAR(100) PRIMARY KEY,
+    direccion VARCHAR(255) NOT NULL 
+);
+
+CREATE TABLE artista (
+    id_artista SERIAL PRIMARY KEY,
+    nombre_casa_disquera VARCHAR(100) NOT NULL,
+    fecha_inicio DATE NOT NULL DEFAULT CURRENT_DATE,
+    fecha_fin DATE,
+    nom_artistico VARCHAR(100) NOT NULL,
+    CONSTRAINT artista_check CHECK (fecha_fin IS NULL OR fecha_fin >= fecha_inicio),
+    CONSTRAINT fk_artista_casa_disquera FOREIGN KEY (nombre_casa_disquera)
+        REFERENCES casa_disquera(nombre) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE producto (
+    id_producto SERIAL PRIMARY KEY,
+    puntuacion INT DEFAULT 0 CHECK (puntuacion >= 0 AND puntuacion <= 5),
+    costo INT NOT NULL CHECK (costo > 0)
+);
+
+CREATE TABLE cancion (
+    id_cancion INTEGER PRIMARY KEY,
+    id_artista INTEGER NOT NULL,
+    genero genero_musical NOT NULL,
+    nom_disco VARCHAR(50) NOT NULL,
+    duracion INT NOT NULL CHECK (duracion > 0),
+    fecha_lanz DATE NOT NULL DEFAULT CURRENT_DATE,
+    nomb_cancion VARCHAR(50) NOT NULL,
+    un_vendidas INT NOT NULL CHECK (un_vendidas >= 0),
+    CONSTRAINT fk_cancion_producto FOREIGN KEY (id_cancion) REFERENCES producto(id_producto),
+    CONSTRAINT fk_cancion_artista FOREIGN KEY (id_artista) REFERENCES artista(id_artista)
+);
+
+CREATE TABLE dispositivo (
+    id_dispositivo INT NOT NULL PRIMARY KEY,
+    capacidad INT CHECK (capacidad > 0),
+    generacion generacion_disp,
+    version_IOS VARCHAR(15) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    CONSTRAINT fk_dispositivo_producto FOREIGN KEY (id_dispositivo) REFERENCES producto(id_producto)
+);
+
+CREATE TABLE proveedor (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    correo VARCHAR(50) NOT NULL CHECK (correo ~ '^.+@.+\..+$'),
+    direccion VARCHAR(255) NOT NULL,
+    fecha_afiliacion DATE DEFAULT CURRENT_DATE,
+    tipo_proveedor tipo_proveedor NOT NULL
+);
+
+CREATE TABLE aplicacion (
+    id_aplicacion INT PRIMARY KEY,
+    tamano_mb INT NOT NULL CHECK (tamano_mb > 0),
+    version VARCHAR(50) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    version_IOS VARCHAR(10) NOT NULL,
+    tematica tematica_app,
+    id_proveedor INTEGER,
+    descripcion VARCHAR(50) NOT NULL,
+    CONSTRAINT fk_aplicacion_producto FOREIGN KEY (id_aplicacion) REFERENCES producto(id_producto),
+    CONSTRAINT fk_aplicacion_proveedor FOREIGN KEY (id_proveedor) REFERENCES proveedor(id)
+);
+
+CREATE TABLE dispositivo_com (
+    dispositivo VARCHAR(50) NOT NULL PRIMARY KEY,
+    id_aplicacion INT NOT NULL,
+    CONSTRAINT fk_dispositivo_com_aplicacion FOREIGN KEY (id_aplicacion) REFERENCES aplicacion(id_aplicacion)
+);
+
+CREATE TABLE usuario (
+    id_usuario SERIAL PRIMARY KEY,
+    correo VARCHAR(50) NOT NULL CHECK (correo ~ '^.+@.+\..+$'),
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    num_tdc VARCHAR(16) NOT NULL CHECK (num_tdc ~ '^\d+$'),
+    fecha_venc DATE NOT NULL,
+    cod_vvt VARCHAR(5) NOT NULL CHECK (cod_vvt ~ '^\d+$'),
+    direccion VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE promocion (
+    id_promocion SERIAL PRIMARY KEY,
+    descuento INT NOT NULL CHECK (descuento >= 0 AND descuento <= 100),
+    fecha_inicio DATE NOT NULL,
+    fecha_fin DATE NOT NULL CHECK (fecha_fin > fecha_inicio),
+    duracion INT
+);
+
+CREATE TABLE compras (
+    id_compra SERIAL PRIMARY KEY,
+    id_producto INT NOT NULL,
+    id_promo INT,
+    id_usuario INT NOT NULL,
+    fecha_compra DATE NOT NULL,
+    rating INT CHECK (rating >= 1 AND rating <= 10),
+    monto DECIMAL NOT NULL,
+    CONSTRAINT fk_compras_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto),
+    CONSTRAINT fk_compras_promo FOREIGN KEY (id_promo) REFERENCES promocion(id_promocion),
+    CONSTRAINT fk_compras_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
+
+CREATE TABLE paises (
+    nombre_pais VARCHAR(50) PRIMARY KEY,
+    id_promocion INT,
+    CONSTRAINT fk_key_promocion FOREIGN KEY (id_promocion) REFERENCES promocion(id_promocion)
+);

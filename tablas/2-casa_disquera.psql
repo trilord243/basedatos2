@@ -2,3 +2,5 @@ CREATE TABLE casa_disquera(
     nombre VARCHAR(100) PRIMARY KEY,
     direccion VARCHAR(255) NOT NULL 
     );
+
+    

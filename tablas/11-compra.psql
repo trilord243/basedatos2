@@ -1,12 +1,11 @@
 CREATE TABLE compras (
-    id_compra SERIAL,
+    id_compra SERIAL PRIMARY KEY,
     id_producto INT NOT NULL,
     id_promo INT,
     id_usuario INT NOT NULL,
     fecha_compra DATE NOT NULL,
     rating INT CHECK (rating >= 1 AND rating <= 10),
     monto DECIMAL NOT NULL,
-    PRIMARY KEY (id_compra, fecha_compra),
     CONSTRAINT fk_compras_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto),
     CONSTRAINT fk_compras_promo FOREIGN KEY (id_promo) REFERENCES promocion(id_promocion),
     CONSTRAINT fk_compras_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
