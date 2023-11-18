@@ -1,0 +1,4 @@
+CREATE VIEW consulta4 AS SELECT a.nombre
+FROM aplicacion a
+JOIN producto p ON a.id_aplicacion = p.id_producto
+WHERE a.version_ios <= (SELECT MAX(version_ios) FROM dispositivo) AND p.puntuacion > 4;

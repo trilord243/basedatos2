@@ -1,6 +1,6 @@
 
 CREATE DOMAIN genero_musical AS VARCHAR(50)
 CHECK (
-    VALUE IN ('Pop', 'Balada', 'Rock', 'Jazz', 'Electrónica', 'Reggae', 'Country', 'Hip Hop', 'Folk')
+    VALUE IN ('Pop', 'Balada', 'Rock', 'Jazz', 'Electrónica', 'Reggae', 'Country', 'Hip Hop', 'Folk','Clasica','Salsa','Merengue','Bachata','Vallenato','Cumbia','Tango','Ranchera','Bolero','Samba','Blues','Rap','Trap','Reggaeton','Metal','Punk','Indie','Alternativa','Grunge','Gospel','Disco','House','Techno','Dubstep','Drum and Bass','Dance','Funk','Soul','R&B','Instrumental','Ambiental','New Age','Infantil','Blues','Otro')
 );
 

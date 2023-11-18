@@ -2,15 +2,3 @@ CREATE DOMAIN tematica_app AS VARCHAR(50)
     CHECK (VALUE IN ('cocina', 'lectura', 'juegos', 'educacion', 'salud', 'deporte', 'musica', 'noticias'));
 
 
-INSERT INTO aplicacion (tamano_mb, version, nombre, version_ios, tematica, id_proveedor, id_aplicacion, descripcion) VALUES
-(150, '1.0', 'App Cocina', '10', 'cocina', 1, 1, 'App de Recetas'),
-(200, '1.1', 'App Lectura', '11', 'lectura', 2, 2, 'App de Libros y Novelas'),
-(100, '2.0', 'App Juegos', '12', 'juegos', 3, 3, 'Juegos para todas las edades'),
-(250, '1.5', 'App Educacion', '13', 'educacion', 4, 4, 'Educación y Aprendizaje'),
-(300, '3.0', 'App Salud', '14', 'salud', 5, 5, 'Salud y Bienestar'),
-(120, '1.2', 'App Deporte', '15', 'deporte', 6, 6, 'Deportes y Actividades'),
-(180, '4.0', 'App Musica', '16', 'musica', 7, 7, 'Música y Audio'),
-(130, '3.5', 'App Noticias', '17', 'noticias', 8, 8, 'Noticias y Revistas'),
-(90, '2.2', 'App Fotografía', '18', 'lectura', 9, 9, 'Fotografía y Edición'),
-(80, '1.8', 'App Viajes', '19', 'educacion', 10, 10, 'Viajes y Guías Locales');
-
