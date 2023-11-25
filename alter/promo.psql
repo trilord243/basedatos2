@@ -1,2 +1,0 @@
-ALTER TABLE promocion
-ADD CONSTRAINT check_descuento_valido CHECK (descuento >= 0 AND descuento <= 100);

@@ -3,7 +3,7 @@ CREATE TABLE aplicacion (
     tamano_mb INT NOT NULL CHECK (tamano_mb > 0),
     version VARCHAR(50) NOT NULL,
     nombre VARCHAR(50) NOT NULL,
-    version_IOS VARCHAR(10) NOT NULL,
+    version_IOS FLOAT NOT NULL,
     tematica tematica_app,
     id_proveedor INTEGER,
     descripcion VARCHAR(50) NOT NULL,

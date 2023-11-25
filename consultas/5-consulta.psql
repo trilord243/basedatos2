@@ -1,7 +1,7 @@
 SELECT 
     cd.nombre AS nombre_disquera,
-    MAX(sub.cancion_mas_vendida) AS cancion_mas_vendida,
-    MAX(sub.max_unidades_vendidas) AS max_unidades_vendidas
+    sub.cancion_mas_vendida,
+    sub.max_unidades_vendidas
 FROM 
     casa_disquera cd
 JOIN 
@@ -16,9 +16,13 @@ JOIN
      GROUP BY 
          a.nombre_casa_disquera, c.nomb_cancion
     ) AS sub ON cd.nombre = sub.nombre_casa_disquera
-GROUP BY 
-    cd.nombre
-HAVING 
-    COUNT(DISTINCT sub.cancion_mas_vendida) > 1
+WHERE 
+    cd.nombre IN (
+        SELECT nombre_casa_disquera
+        FROM artista
+        GROUP BY nombre_casa_disquera
+        HAVING COUNT(DISTINCT id_artista) > 3
+    )
 ORDER BY 
-    max_unidades_vendidas DESC;
+    sub.max_unidades_vendidas DESC, 
+    cd.nombre;

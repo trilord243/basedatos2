@@ -2,7 +2,7 @@ CREATE TABLE dispositivo (
     id_dispositivo INT NOT NULL PRIMARY KEY,
     capacidad INT CHECK (capacidad > 0),
     generacion generacion_disp,
-    version_IOS VARCHAR(15) NOT NULL,
+    version_IOS FLOAT NOT NULL,
     modelo VARCHAR(50) NOT NULL,
     CONSTRAINT fk_dispositivo_producto FOREIGN KEY (id_dispositivo) REFERENCES producto(id_producto)
 );

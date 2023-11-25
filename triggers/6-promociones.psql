@@ -1,6 +1,7 @@
 CREATE OR REPLACE FUNCTION validar_pais_promocion()
 RETURNS TRIGGER AS $$
 
+
 DECLARE
     pais_usuario VARCHAR(50);
 BEGIN
@@ -9,10 +10,12 @@ BEGIN
         RETURN NEW;
     END IF;
 
+
     -- Obtener el pa¡s del usuario
     SELECT pais INTO pais_usuario
     FROM usuario
     WHERE id_usuario = NEW.id_usuario;
+
 
     -- Verificar si el pa¡s del usuario coincide con los pa¡ses de la promoci¢n aplicada
     IF NOT EXISTS (
@@ -23,10 +26,15 @@ BEGIN
         RAISE EXCEPTION 'La promocion no es valida en el pa¡s del usuario.';
     END IF;
 
+
     RETURN NEW;
 END;
 
+
 $$ LANGUAGE plpgsql;
+
+
+
 
 
 

@@ -1,20 +1,30 @@
- INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES
- (1, 1, 'Pop', 'Álbum A', 180, '2023-01-01', 'Canción A1', 1000),
- (2, 2, 'Rock', 'Álbum B', 210, '2023-02-02', 'Canción B1', 800),
- (3, 3, 'Jazz', 'Álbum C', 200, '2023-03-03', 'Canción C1', 600),
- (5, 5, 'Electrónica', 'Álbum E', 300, '2023-05-05', 'Canción E1', 700),
- (6, 6, 'Reggae', 'Álbum F', 220, '2023-06-06', 'Canción F1', 550),
- (7, 7, 'Country', 'Álbum G', 260, '2023-07-07', 'Canción G1', 450),
- (9, 9, 'Hip Hop', 'Álbum I', 230, '2023-09-09', 'Canción I1', 650),
- (10, 10, 'Folk', 'Álbum J', 270, '2023-10-10', 'Canción J1', 400),
- (8, 8, 'Rock', 'Álbum H', 280, '2023-08-08', 'Canción H1', 500),
- (11, 1, 'Electrónica', 'Disco Electrónico', 200, '2023-11-17', 'Canción Electrónica 1', 500),
- (33, 11, 'Electrónica', 'Álbum Electrónico 1', 210, '2023-11-17', 'Electro Hit 1', 1300),
- (31, 12, 'Reggae', 'Álbum Reggae 1', 220, '2023-11-17', 'Reggae Groove 1', 1150),
- (32, 13, 'Country', 'Álbum Country 1', 205, '2023-11-17', 'Country Road 1', 950),
- (34, 14, 'Hip Hop', 'Álbum Hip Hop 1', 215, '2023-11-17', 'Hip Hop Beat 1', 870),
- (104, 14, 'Pop', 'Álbum Pop', 190, '2023-11-17', 'Canción Pop 1', 1200),
- (106, 15, 'Rock', 'Álbum Rock', 220, '2023-11-17', 'Canción Rock 1', 1050),
- (107, 21, 'Rock', 'Nuevo Álbum Rock', 240, '2023-11-17', 'Rock Hit Disquera K', 1200),
- (108, 28, 'Pop', 'Nuevo Álbum Pop', 230, '2023-11-17', 'Pop Hit Disquera M', 1100),
- (109, 33, 'Jazz', 'Nuevo Álbum Jazz', 220, '2023-11-17', 'Jazz Hit Nueva Disquera', 1000);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (1, 1, 'Pop', 'Disco Hit 1', 210, 'Amanecer', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (2, 2, 'Rock', 'Rock On 2', 180, 'Noches de Fuego', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (3, 3, 'Jazz', 'Jazz Vibes 3', 240, 'Melodía Suave', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (4, 4, 'Electrónica', 'Electro Beat 4', 220, 'Ritmo Sintético', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (5, 5, 'Balada', 'Classical Moments 5', 300, 'Sinfonía Nocturna', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (6, 1, 'Balada', 'Baladas Forever 6', 250, 'Corazón Partido', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (7, 2, 'Reggae', 'Reggae Roots 7', 230, 'Sol Caribeño', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (8, 3, 'Hip Hop', 'Hip Hop Streets 8', 210, 'Rimas Urbanas', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (9, 4, 'Country', 'Country Roads 9', 260, 'Camino al Sur', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (10, 5, 'Folk', 'Folk Tales 10', 280, 'Historias del Viento', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (102, 1, 'Electrónica', 'ElectroBeats', 200, '2023-01-01', 'ElectroWave', 0);
+
+
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (103, 1, 'Electrónica', 'ElectroBeats', 200, '2023-01-01', 'ElectroWave', 0);
+
+
+
+
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (103, 11, 'Pop', 'Hits de Disquera A', 210, CURRENT_DATE, 'Hit A1', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (104, 12, 'Rock', 'Rocks de Disquera A', 180, CURRENT_DATE, 'Rock A2', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (105, 13, 'Jazz', 'Jazz de Disquera A', 240, CURRENT_DATE, 'Jazz A3', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (106, 14, 'Electrónica', 'Electro de Disquera A', 220, CURRENT_DATE, 'Electro A4', 0);
+
+
+
+
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (107, 15, 'Pop', 'Hits de Disquera B', 250, CURRENT_DATE, 'Hit B1', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (108, 16, 'Rock', 'Rocks de Disquera B', 230, CURRENT_DATE, 'Rock B2', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (109, 17, 'Jazz', 'Jazz de Disquera B', 210, CURRENT_DATE, 'Jazz B3', 0);
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, fecha_lanz, nomb_cancion, un_vendidas) VALUES (110, 18, 'Electrónica', 'Electro de Disquera B', 260, CURRENT_DATE, 'Electro B4', 0);

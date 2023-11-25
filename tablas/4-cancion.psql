@@ -6,7 +6,7 @@ CREATE TABLE cancion (
     duracion INT NOT NULL CHECK (duracion > 0),
     fecha_lanz DATE NOT NULL DEFAULT CURRENT_DATE,
     nomb_cancion VARCHAR(50) NOT NULL,
-    un_vendidas INT NOT NULL CHECK (un_vendidas >= 0),
+    un_vendidas INT DEFAULT 0  CHECK (un_vendidas >= 0),
     CONSTRAINT fk_cancion_producto FOREIGN KEY (id_cancion) REFERENCES producto(id_producto),
     CONSTRAINT fk_cancion_artista FOREIGN KEY (id_artista) REFERENCES artista(id_artista)
 );

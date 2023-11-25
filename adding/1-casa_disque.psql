@@ -1,22 +1,12 @@
-INSERT INTO casa_disquera (nombre, direccion) VALUES
-('Disquera B', 'Avenida 456, Ciudad B'),
-('Disquera C', 'Vía 789, Ciudad C'),
-('Disquera D', 'Pasaje 101, Ciudad D'),
-('Disquera E', 'Boulevard 202, Ciudad E'),
-('Disquera F', 'Carretera 303, Ciudad F'),
-('Disquera G', 'Ruta 404, Ciudad G'),
-('Disquera H', 'Camino 505, Ciudad H'),
-('Disquera I', 'Paseo 606, Ciudad I'),
-('Disquera J', 'Sendero 707, Ciudad J'),
-('Disquera A', 'Calle 123, Ciudad A'),
-('Melodías Modernas', 'Avenida del Progreso 101'),
-('Ritmos del Siglo', 'Calle de la Armonía 202'),
-('Sinfonías Urbanas', 'Boulevard del Jazz 303'),
-('Ecos Ancestrales', 'Pasaje del Folklore 404'),
-('Acordes Contemporáneos', 'Ruta de la Innovación 505'),
-('Disquera K', 'Calle 111, Ciudad K'),
-('Disquera L', 'Avenida 222, Ciudad L'),
-('Disquera M', 'Vía 333, Ciudad M'),
-('Nueva Disquera', 'Calle Nueva, Ciudad Nueva');
-
-
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Harmony Records', '123 Harmony St, Music City');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Beatwave Studios', '456 Beat Ave, Rhythm Town');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Melody Makers', '789 Melody Ln, Tuneville');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Bassline Productions', '101 Bass Blvd, Groove City');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Echo Entertainment', '202 Echo Rd, Sound City');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Vibrant Vibes Music', '303 Vibe St, Harmony Town');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Riff Records', '404 Riff Rd, Melody City');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Sonic Sounds Studio', '505 Sonic St, Beat City');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Tempo Tracks', '606 Tempo Ln, Rhythm Village');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Tune Tower Records', '707 Tune Tower Rd, Music Metropolis');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Disquera A', 'Dirección A');
+INSERT INTO casa_disquera (nombre, direccion) VALUES ('Disquera B', 'Dirección B');

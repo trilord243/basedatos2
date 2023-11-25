@@ -1,11 +1,10 @@
-INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES
-('pedro.alvarez@example.com', 'Pedro', 'Alvarez', '8888999911112222', '2025-11-01', '987', '1717 Calle Inventada', 'Perú'),
-('julia.martinez@example.com', 'Julia', 'Martinez', '6666777788889999', '2025-12-01', '876', '1818 Avenida Ilusión', 'Bolivia'),
-('fernando.garcia@example.com', 'Fernando', 'Garcia', '4444555566667777', '2026-01-01', '765', '1919 Camino Ficticio', 'Argentina'),
-('claudia.rodriguez@example.com', 'Claudia', 'Rodriguez', '2222333344445555', '2026-02-01', '654', '2020 Vía Imaginada', 'Chile'),
-('roberto.sanchez@example.com', 'Roberto', 'Sanchez', '9999888877776666', '2026-03-01', '543', '2121 Boulevard Fantasía', 'México'),
-('gabriela.lopez@example.com', 'Gabriela', 'Lopez', '7777666655554444', '2026-04-01', '432', '2222 Paseo Inexistente', 'Colombia'),
-('daniel.jimenez@example.com', 'Daniel', 'Jimenez', '5555444433332222', '2026-05-01', '321', '2323 Callejón Soñado', 'Venezuela'),
-('andrea.torres@example.com', 'Andrea', 'Torres', '3333222211110000', '2026-06-01', '210', '2424 Avenida Utopía', 'España'),
-('sergio.gomez@example.com', 'Sergio', 'Gomez', '1111000099998888', '2026-07-01', '109', '2525 Ruta Ilusoria', 'Ecuador'),
-('alicia.martinez@example.com', 'Alicia', 'Martinez', '8888777766665555', '2026-08-01', '098', '2626 Sendero Ficticio', 'Paraguay');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('jane.doe@example.com', 'Jane', 'Doe', '1234567890123456', '2024-08-31', '123', '123 Main St, Anytown', 'USA');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('john.smith@example.com', 'John', 'Smith', '2345678901234567', '2023-12-15', '456', '456 Elm St, Newtown', 'Canada');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('maria.lopez@example.com', 'Maria', 'Lopez', '3456789012345678', '2024-01-25', '789', '789 Oak St, Oldtown', 'Mexico');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('li.jun@example.com', 'Jun', 'Li', '4567890123456789', '2024-02-03', '012', '123 Pine St, Littletown', 'China');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('ahmed.ali@example.com', 'Ahmed', 'Ali', '5678901234567890', '2024-02-13', '345', '456 Cedar St, Bigtown', 'Egypt');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('emma.jones@example.com', 'Emma', 'Jones', '6789012345678901', '2025-07-22', '678', '789 Maple St, Smalltown', 'UK');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('takashi.sato@example.com', 'Takashi', 'Sato', '7890123456789012', '2024-03-31', '901', '123 Birch St, Fartown', 'Japan');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('sophie.martin@example.com', 'Sophie', 'Martin', '8901234567890123', '2023-09-20', '234', '456 Willow St, NearTown', 'France');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('david.garcia@example.com', 'David', 'Garcia', '9012345678901234', '2025-01-10', '567', '789 Spruce St, FarTown', 'Spain');
+INSERT INTO usuario (correo, nombre, apellido, num_tdc, fecha_venc, cod_vvt, direccion, pais) VALUES ('olivia.brown@example.com', 'Olivia', 'Brown', '0123456789012345', '2024-10-05', '890', '123 Ash St, HereTown', 'Australia');

@@ -1,13 +1,10 @@
-INSERT INTO proveedor (id, nombre, correo, direccion, fecha_afiliacion, tipo_proveedor) VALUES
-(1, 'Proveedor 1', 'correo1@proveedor.com', 'Dirección 1', '2023-11-16', 'desarrollador'),
-(2, 'Proveedor 2', 'correo2@proveedor.com', 'Dirección 2', '2023-11-16', 'desarrollador'),
-(3, 'Proveedor 3', 'correo3@proveedor.com', 'Dirección 3', '2023-11-16', 'desarrollador'),
-(4, 'Proveedor 4', 'correo4@proveedor.com', 'Dirección 4', '2023-11-16', 'desarrollador'),
-(5, 'Proveedor 5', 'correo5@proveedor.com', 'Dirección 5', '2023-11-16', 'desarrollador'),
-(6, 'Empresa A', 'correo6@empresa.com', 'Dirección 6', '2023-11-16', 'empresa'),
-(7, 'Empresa B', 'correo7@empresa.com', 'Dirección 7', '2023-11-16', 'empresa'),
-(8, 'Empresa C', 'correo8@empresa.com', 'Dirección 8', '2023-11-16', 'empresa'),
-(9, 'Empresa D', 'correo9@empresa.com', 'Dirección 9', '2023-11-16', 'empresa'),
-(10, 'Empresa E', 'correo10@empresa.com', 'Dirección 10', '2023-11-16', 'empresa'),
-(11, 'Desarrollador X', 'contacto@desarrolladorx.com', 'Dirección X', '2023-11-17', 'desarrollador'),
-(12, 'Empresa Y', 'info@empresay.com', 'Dirección Y', '2023-11-17', 'empresa');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('Tech Solutions', 'contact@techsolutions.com', '123 Tech Street, Silicon Valley', 'empresa');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('Green Code Studio', 'info@greencodestudio.com', '456 Developer Ave, Tech Town', 'desarrollador');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('Innovative Apps Inc.', 'support@innovativeapps.com', '789 Innovation Rd, New Tech City', 'empresa');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('Creative Minds', 'hello@creativeminds.com', '101 Creative Blvd, Artisan Village', 'desarrollador');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('NextGen Developers', 'contact@nextgendevelopers.com', '202 Next St, Future City', 'desarrollador');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('AlphaTech Creations', 'info@alphatech.com', '303 Alpha Rd, Tech Park', 'empresa');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('CodeCrafters', 'support@codecrafters.com', '404 Craft St, Programmer Town', 'desarrollador');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('Virtual Visions', 'hello@virtualvisions.com', '505 Virtual Ln, Cyber City', 'empresa');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('AppMakers Ltd.', 'contact@appmakers.com', '606 Maker Ave, Appville', 'empresa');
+INSERT INTO proveedor (nombre, correo, direccion, tipo_proveedor) VALUES ('DreamCode Studio', 'info@dreamcodestudio.com', '707 Dream St, Dev City', 'desarrollador');

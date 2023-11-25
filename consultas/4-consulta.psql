@@ -1,4 +1,5 @@
-SELECT a.nombre
+SELECT a.nombre, a.version, a.version_ios, p.puntuacion
 FROM aplicacion a
 JOIN producto p ON a.id_aplicacion = p.id_producto
-WHERE a.version_ios <= (SELECT MAX(version_ios) FROM dispositivo) AND p.puntuacion > 4;
+WHERE a.version_ios <= (SELECT MAX(version_ios) FROM dispositivo)
+  AND p.puntuacion > 4;

@@ -1,0 +1,10 @@
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('USA', 1);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('Canada', 2);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('Mexico', 3);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('UK', 4);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('France', 5);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('Germany', 6);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('Spain', 7);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('Italy', 8);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('Japan', 9);
+INSERT INTO paises (nombre_pais, id_promocion) VALUES ('Australia', 10);

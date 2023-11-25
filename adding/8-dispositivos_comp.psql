@@ -1,13 +1,10 @@
--- Assuming that the 'dispositivo' column refers to 'id_dispositivo' from the 'dispositivo' table
--- And you have devices and applications with IDs ranging from 1 to 10 as an example
-INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES
-('11', 1),
-('12', 2),
-('13', 3),
-('14', 4),
-('15', 5),
-('16', 6),
-('17', 7),
-('18', 8),
-('19', 9),
-('20', 10);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo A', 21);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo B', 22);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo C', 23);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo D', 24);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo E', 25);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo F', 26);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo G', 27);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo H', 28);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo I', 29);
+INSERT INTO dispositivo_com (dispositivo, id_aplicacion) VALUES ('Modelo J', 30);

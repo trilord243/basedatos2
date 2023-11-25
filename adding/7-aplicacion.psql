@@ -1,14 +1,15 @@
-INSERT INTO aplicacion (tamano_mb, version, nombre, version_ios, tematica, id_proveedor, id_aplicacion, descripcion) VALUES
-(150, '1.0', 'App Cocina', '10', 'cocina', 1, 1, 'App de Recetas'),
-(200, '1.1', 'App Lectura', '11', 'lectura', 2, 2, 'App de Libros y Novelas'),
-(100, '2.0', 'App Juegos', '12', 'juegos', 3, 3, 'Juegos para todas las edades'),
-(250, '1.5', 'App Educacion', '13', 'educacion', 4, 4, 'Educación y Aprendizaje'),
-(300, '3.0', 'App Salud', '14', 'salud', 5, 5, 'Salud y Bienestar'),
-(120, '1.2', 'App Deporte', '15', 'deporte', 6, 6, 'Deportes y Actividades'),
-(180, '4.0', 'App Musica', '16', 'musica', 7, 7, 'Música y Audio'),
-(130, '3.5', 'App Noticias', '17', 'noticias', 8, 8, 'Noticias y Revistas'),
-(90, '2.2', 'App Fotografía', '18', 'lectura', 9, 9, 'Fotografía y Edición'),
-(80, '1.8', 'App Viajes', '19', 'educacion', 10, 10, 'Viajes y Guías Locales');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (21, 150, 1.0, 'RecipeMaster', '14.0', 'cocina', 1, 'Tu asistente de cocina definitivo');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (22, 200, 2.5, 'CodeLearn', '15.0', 'educacion', 2, 'Aprende a programar jugando');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (23, 100, 3.1, 'FitBuddy', '16.0', 'salud', 3, 'Tu compañero de fitness personal');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (24, 250, 4.0, 'MindSpace', '13.0', 'salud', 4, 'Meditación y mindfulness');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (25, 300, 1.2, 'EcoTravel', '14.5', 'viajes', 5, 'Guía para viajes ecológicos');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (26, 120, 2.0, 'QuickMaths', '15.2', 'educacion', 6, 'Desafíos matemáticos rápidos');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (27, 180, 5.3, 'StarGazer', '16.1', 'educacion', 7, 'Explora el universo desde tu móvil');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (28, 90, 3.8, 'BudgetPlanner', '17.0', 'educacion', 8, 'Planifica y gestiona tus finanzas fácilmente');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (29, 220, 1.1, 'YogaFlow', '13.0', 'salud', 9, 'Sesiones de yoga para todos los niveles');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (30, 140, 2.2, 'NewsDigest', '14.0', 'noticias', 10, 'Tu resumen diario de noticias');
 
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (60, 50, 2.9, 'Calculadora', '14.0', 'educacion', 1, 'Calculadora');
 
-
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_IOS, tematica, id_proveedor, descripcion) VALUES (48, 200, 2.9, 'CanduCrush', '14.0', 'educacion', 1, 'Juego divertido');
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_ios, tematica, id_proveedor, descripcion) VALUES (101, 100, 1.0, 'SuperChef', '14.0', 'cocina', 1, 'Tu guía de cocina');

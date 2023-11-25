@@ -1,11 +1,10 @@
-INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_ios, modelo) VALUES
-(11, 64, 'Gen1', 'iOS 10', 'Modelo A'),
-(12, 128, 'Gen2', 'iOS 11', 'Modelo B'),
-(13, 256, 'Gen3', 'iOS 12', 'Modelo C'),
-(14, 512, 'Gen4', 'iOS 13', 'Modelo D'),
-(15, 32, 'Gen1', 'iOS 14', 'Modelo E'),
-(16, 64, 'Gen2', 'iOS 15', 'Modelo F'),
-(17, 128, 'Gen3', 'iOS 16', 'Modelo G'),
-(18, 256, 'Gen4', 'iOS 17', 'Modelo H'),
-(19, 512, 'Gen1', 'iOS 18', 'Modelo I'),
-(20, 32, 'Gen2', 'iOS 19', 'Modelo J');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (11, 64, 'Gen1', 13.0, 'Modelo A');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (12, 128, 'Gen2', 14.0, 'Modelo B');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (13, 256, 'Gen3', 15.0, 'Modelo C');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (14, 512, 'Gen4', 16.0, 'Modelo D');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (15, 1024, 'Gen5', 17.0, 'Modelo E');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (16, 32, 'Gen1', 13.0, 'Modelo F');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (17, 64, 'Gen2', 14.5, 'Modelo G');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (18, 128, 'Gen3', 15.2, 'Modelo H');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (19, 256, 'Gen4', 16.1, 'Modelo I');
+INSERT INTO dispositivo (id_dispositivo, capacidad, generacion, version_IOS, modelo) VALUES (20, 512, 'Gen5', 17.3, 'Modelo J');

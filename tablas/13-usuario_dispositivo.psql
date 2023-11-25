@@ -1,0 +1,7 @@
+CREATE TABLE usuario_dispositivo (
+    id_usuario INT,
+    id_dispositivo INT,
+    PRIMARY KEY (id_usuario, id_dispositivo),
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
+    FOREIGN KEY (id_dispositivo) REFERENCES dispositivo(id_dispositivo)
+);

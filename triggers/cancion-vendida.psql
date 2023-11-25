@@ -1,0 +1,23 @@
+CREATE OR REPLACE FUNCTION actualizar_unidades_vendidas()
+RETURNS TRIGGER AS $$
+DECLARE
+    es_cancion BOOLEAN;
+BEGIN
+    -- Verificar si el id_producto corresponde a una canción
+    SELECT EXISTS(SELECT 1 FROM cancion WHERE id_cancion = NEW.id_producto)
+    INTO es_cancion;
+
+    -- Si es una canción, entonces incrementar las unidades vendidas
+    IF es_cancion THEN
+        UPDATE cancion
+        SET un_vendidas = un_vendidas + 1
+        WHERE id_cancion = NEW.id_producto;
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+CREATE TRIGGER after_compra_update
+AFTER INSERT ON compras
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_unidades_vendidas();
