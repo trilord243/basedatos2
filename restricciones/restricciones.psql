@@ -1,0 +1,68 @@
+--Los precios de los productos deben ser mayores a 0, así como no pueden existir descuentos negativos ni mayores al 100%.
+INSERT INTO producto (id_producto, puntuacion, costo) VALUES (800, 0, -150); --valor negativo
+
+INSERT INTO promocion (descuento, fecha_inicio, fecha_fin, duracion) VALUES (500, '2023-01-01', '2023-01-31', 30);
+--valor mayor al 100%
+
+-- La fecha de finalización de una promoción no puede ser menor a la fecha de inicio de tal promoción.
+
+INSERT INTO promocion (descuento, fecha_inicio, fecha_fin, duracion) VALUES (50, '2023-01-31', '2023-01-01', 30); --fecha de fin menor a la de inicio
+
+--La duración de las canciones no puede ser menor a cero, de igual forma el tamaño (MB) de las aplicaciones.
+
+INSERT INTO cancion (id_cancion, id_artista, genero, nom_disco, duracion, nomb_cancion, un_vendidas) VALUES (1, 1, 'Pop', 'Disco Hit 1', -210, 'Amanecer', 0); --cantidad duracion negativa
+
+INSERT INTO aplicacion (id_aplicacion, tamano_mb, version, nombre, version_ios, tematica, id_proveedor, descripcion) VALUES (101, -100, 1.0, 'SuperChef', '14.0', 'cocina', 1, 'Tu guía de cocina');
+--tamaño negativo
+
+--Si un usuario ha comprado más de 3 productos debe crearse automáticamente una promoción que le ofrezca un descuento en su compra del 30%, que comience el mismo día de la compra y termine pasado un mes, con el fin de incentivar su consumo.
+
+INSERT INTO compras (id_producto, id_usuario, fecha_compra, rating, monto) VALUES (2, 5, '2023-11-28', 4, 35.00);
+
+INSERT INTO compras (id_producto, id_usuario, fecha_compra, rating, monto) VALUES (5, 5, '2023-11-28', 4, 35.00);
+
+INSERT INTO compras (id_producto, id_usuario, fecha_compra, rating, monto) VALUES (4, 5, '2023-11-28', 4, 35.00);
+
+--Se necesita que a la hora de comprar una aplicación, la versión del iOS del Dispositivo que posee el cliente sea mayor o igual a la versión del iOS que especifica dicha aplicación, en caso de no ser así no podrá efectuarse la compra.
+
+INSERT INTO compras (id_producto, id_promo, id_usuario, fecha_compra, rating, monto)
+VALUES (28, 2, 2, '2023-02-15', 5, 200.00);-- El uusario 2 no puede comprar la aplicacion porque su version ios es 14.0 y la aplicacion requiere 17.0
+
+
+
+INSERT INTO compras (id_producto, id_promo, id_usuario, fecha_compra, rating, monto)
+VALUES (28, NULL, 10, '2023-02-15', 1, 200.00);
+--Este si lo deja comprar porque su version ios de su dispositivo es 17.3 y la aplicacion requiere 17.0
+
+--Las puntuaciones que dan los usuarios a los productos comprados deben estar entre 0 y 5 puntos (enteros).
+
+INSERT INTO compras (id_producto, id_promo, id_usuario, fecha_compra, rating, monto)
+VALUES (21, NULL, 10, '2023-02-15', 10, 200.00); --puntuacion mayor a 5
+
+--La puntuación total de un producto debe ser calculada como el promedio de los rating que dejaron los usuarios en sus compras.
+
+INSERT INTO compras (id_producto, id_promo, id_usuario, fecha_compra, rating, monto)
+VALUES (1, NULL, 10, '2023-05-15', 1, 200.00);
+
+INSERT INTO compras (id_producto, id_promo, id_usuario, fecha_compra, rating, monto)
+VALUES (1, NULL, 3, '2023-06-15', 4, 200.00);
+
+INSERT INTO compras (id_producto, id_promo, id_usuario, fecha_compra, rating, monto)
+VALUES (1, NULL, 2, '2023-07-15', 2, 200.00);
+
+
+
+--Se debe validar al momento de aplicar una promoción en una compra que el país del usuario coincida con los países de la promoción. 
+
+
+INSERT INTO compras (id_producto, id_promo, id_usuario, fecha_compra, rating, monto)
+VALUES (6,2 , 2, '2023-07-15', 2, 200.00);-- si pudo 
+
+INSERT INTO compras (id_producto, id_promo, id_usuario, fecha_compra, rating, monto)
+VALUES (6,2 , 3, '2023-07-15', 2, 200.00); -- no es valido en su pais
+
+
+
+--Tomar en cuenta dominios personalizados como género musical asociado como: Pop, Balada, Rock, entre otras y temática de aplicaciones: juegos, cocina, lectura, entre otros.
+
+

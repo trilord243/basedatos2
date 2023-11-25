@@ -1,0 +1,11 @@
+
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (1, 11); 
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (2, 12);  
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (3, 13);  
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (4, 14);  
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (5, 15);  
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (6, 16);
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (7, 17); 
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (8, 18);   
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (9, 19); 
+INSERT INTO usuario_dispositivo (id_usuario, id_dispositivo) VALUES (10, 20);
